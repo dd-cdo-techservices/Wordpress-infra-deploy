@@ -187,7 +187,7 @@ resource "aws_security_group" "cicd_db_sg" {
 
 #Provision an EC2 instance for hosting wordpress app server
 resource "aws_instance" "wordpress_app_server" {
-	ami				= "${data.aws_ami.ubjavaami.id}"
+	ami				= "${data.aws_ami.wordpressappami.id}"
 	instance_type			= "t2.micro"
 	subnet_id 			= "${aws_subnet.uconenetworkpublicsubnet.id}"
 	depends_on			= ["aws_internet_gateway.cicdgw"]
