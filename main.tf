@@ -20,7 +20,7 @@ data "aws_ami" "wordpressappami" {
 
   filter {
     name   = "tag:Name"
-    values = ["uc-one-javaub"]
+    values = ["wordpress-app-AMI"]
   }
 }
 
@@ -35,7 +35,7 @@ data "aws_ami" "ubmysqlami" {
   }
 
   tags = {
-    Name = "uc-one-MYSQLUB"
+    Name = "wordpress-mysql-ami"
   }
 }
 
