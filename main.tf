@@ -7,6 +7,7 @@
 
 provider "aws" {
 	region = "${var.aws_region}"
+	profile = "wordpress-app"
 }
 
 #Find the latest available AMI with Wordpress based on Name Tag
