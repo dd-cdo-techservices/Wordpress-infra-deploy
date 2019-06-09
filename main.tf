@@ -193,6 +193,7 @@ resource "aws_instance" "wordpress_app_server" {
 	depends_on			= ["aws_internet_gateway.cicdgw"]
 	vpc_security_group_ids 		= ["${aws_security_group.cicd_sg.id}"]
 	private_ip			= "${var.wordpress_app_server_privateip}"
+	key_name                        = "devopsTestKP"
 	tags = {
     	  Name		= "wordpress_app_server"
     	  CreatedBy	= "cdo_devops"
@@ -214,6 +215,7 @@ resource "aws_instance" "wordpress_mysql_server" {
 	subnet_id			= "${aws_subnet.uconenetworkprivatesubnet.id}"
 	vpc_security_group_ids		= ["${aws_security_group.cicd_db_sg.id}"]
 	private_ip			= "${var.wordpress_db_server_privateip}"
+	key_name                        = "devopsTestKP"
 	tags = {
 	  Name		= "wordpress_mysql"
 	  CreatedBy	= "cdo_devops"
