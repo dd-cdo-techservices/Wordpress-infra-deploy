@@ -35,7 +35,7 @@ data "aws_ami" "ubmysqlami" {
     values = ["available"]
   }
 
-  tags = {
+  filter {
 	  name   = "tag:Name"
     values = "[wordpress-mysql-ami]"
   }
