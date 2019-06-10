@@ -36,6 +36,7 @@ data "aws_ami" "ubmysqlami" {
   }
 
   tags = {
+	  name   = "tag:Name"
     Name = "wordpress-mysql-ami"
   }
 }
